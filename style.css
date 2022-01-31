@@ -1,0 +1,256 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root { 
+    --main-color: rgba(231,15,98,1);
+    --second-color: rgba(12,212,238) ;
+}
+body { 
+    background: black;
+}
+.container { 
+    margin: 0 auto;
+    
+    max-width: 350px;
+    padding:  20px;
+}
+section { 
+    height: 100vh;
+    position: fixed;
+        top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: hidden;
+    background-color: black;
+}
+section.two,
+section.three { 
+   z-index: -1;
+}
+
+.hidden { 
+    display: none;
+}
+section.shwo { 
+    z-index: 1;
+    animation: rightToLeft 1s linear;
+}
+@keyframes rightToLeft {
+    0% { 
+        transform: translateX(100%);
+    }
+    100% { 
+        transform: translateX(0);
+    }
+}
+.card { 
+    max-width: 400px;
+    height: 450px;
+ overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+.card::before { 
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 100px;
+    background: linear-gradient(90deg,
+    rgba(12,212,238) 0%,rgba(220,39,252,1) 35%,
+    rgba(231,15,98,1) 100%);
+    animation: rotating 1.5s linear infinite;
+    filter: drop-shadow(0 0 40px rgba(231,15,98,1));
+}
+.card::after { 
+    content: '';
+    position: absolute;
+    background:black;
+    inset: 4px;
+
+}
+@keyframes rotating {
+    to { 
+        transform: rotate(360deg);
+    }
+}
+h2 { 
+    z-index: 3;
+    z-index: 3;
+    color: var(--second-color);
+    text-align: center;
+}
+h2 span { 
+    display: block;
+    text-align: center;
+    color: var(--main-color);
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+.card p { 
+    width: 100%;
+    color: var(--main-color);
+    z-index: 1;
+    text-align: center;
+    font-size: 30px;
+}
+.card button { 
+    color: #0091ff;
+    font-weight: bold;
+    background: black;
+    z-index: 3;
+    width: 50%;
+    font-size: 20px;
+    padding: 8px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 9px 0 #650f5d, inset 0 0 3px 0 #413c78;
+    cursor: pointer;
+    transition: .4s ease;
+}
+form { 
+z-index: 3;
+}
+label { 
+    color: var(--second-color);
+    width: 100%;
+    display: block;
+    margin-bottom: 15px;
+}
+input { 
+    margin-bottom: 20px;
+    background: none;
+    box-shadow: 0 0 1px 0 red;
+    outline: none;
+    border: none;
+    padding: 8px;
+    color: var(--main-color);
+    transition: 1s;
+}
+input[type="submit"] { 
+    display: block;
+    width: 100px;
+    margin-top: 20px;
+    color: var(--second-color);
+    cursor: pointer;
+}
+input:focus { 
+    box-shadow: 0 0 5px 0 var(--main-color);
+}
+.error { 
+ color: black;
+   
+}
+.error.run {
+    animation: change 3s  linear ;
+}
+@keyframes change {
+    20% { 
+        color: red;
+    }
+    40% { 
+        color: black;
+    }
+    60% { 
+        color: red;
+    }
+    80% { 
+        color: black;
+    }
+    100% { 
+        color: red;
+    }
+}
+
+.three .box {
+    width: 360px;
+    height: 400px;
+    background: white;
+    z-index: 1;
+    position: relative;
+    perspective: 1000px;
+}
+.three .box .left { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(image/happy.jpg);
+    background-position: center;
+    background-size: cover;
+    width:50%;
+    height: 100%;
+    transform-origin: left;
+    transition: 1s;
+}
+.three .box .right { 
+    background-image: url(image/happy.jpg);
+    background-position: center;
+    background-size: cover;
+    
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    transform: rotateY(-360deg);
+    transform: rotateY(0deg);
+    transform-origin: right;
+    transition:  1s;
+}
+.three .box .back { 
+    background-image: url(image/happy-2.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform: translateZ(-300px);
+    transition: .8s;
+}
+.three .box .back h1 { 
+    color: blue;
+    text-align: center;
+    margin-top: 60px;
+    box-shadow: 0 0 9px 0 #5dcbeb69;
+    width: fit-content;
+    margin: 40px auto;
+    padding: 15px;
+    font-size: 30px;
+    border-radius: 11px;
+    animation: colorChange 8s steps(3) infinite ;
+}
+@keyframes colorChange {
+    20% { 
+        color: red;
+    }  40% { 
+        color: rgb(3, 33, 90);
+    }  60% { 
+        color: rgb(7, 131, 90);
+    }  80% { 
+        color: rgb(255, 0, 170);
+    }
+    100% { 
+        color: rgb(255, 255, 255);
+    }
+}
+ .box:hover .left { 
+    transform: rotateY(-360deg);
+}
+ .box:hover .right { 
+    transform: rotateY(360deg);
+}
+.box:hover .back { 
+    transform: translateZ(0);
+    z-index: 1;
+}
