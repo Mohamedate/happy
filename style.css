@@ -61,7 +61,7 @@ section.shwo {
 .card::before { 
     content: '';
     position: absolute;
-    width: 500px;
+    width: 600px;
     height: 100px;
     background: linear-gradient(90deg,
     rgba(12,212,238) 0%,rgba(220,39,252,1) 35%,
