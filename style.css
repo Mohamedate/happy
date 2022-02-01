@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800&family=Caveat&family=Clicker+Script&family=Lobster&family=Luxurious+Roman&family=Noto+Kufi+Arabic&family=Poppins:wght@200;300;400;500;600&family=Quintessential&display=swap');
 * { 
     margin: 0;
     padding: 0;
@@ -12,7 +13,7 @@ body {
 }
 .container { 
     margin: 0 auto;
-    
+    height :100vh;
     max-width: 350px;
     padding:  20px;
 }
@@ -47,8 +48,8 @@ section.shwo {
     }
 }
 .card { 
-    max-width: 400px;
-    height: 450px;
+    max-width: 500px;
+    height: 85%;
  overflow: hidden;
     display: flex;
     justify-content: center;
@@ -117,12 +118,14 @@ h2 span {
 }
 form { 
 z-index: 3;
+width: 80%;
 }
 label { 
     color: var(--second-color);
     width: 100%;
     display: block;
     margin-bottom: 15px;
+    font-size: 20px;
 }
 input { 
     margin-bottom: 20px;
@@ -130,13 +133,15 @@ input {
     box-shadow: 0 0 1px 0 red;
     outline: none;
     border: none;
-    padding: 8px;
+    padding: 10px;
     color: var(--main-color);
     transition: 1s;
+    width: 90%;
 }
 input[type="submit"] { 
     display: block;
-    width: 100px;
+    width: 120px;
+    font-size: 20px;
     margin-top: 20px;
     color: var(--second-color);
     cursor: pointer;
@@ -170,8 +175,8 @@ input:focus {
 }
 
 .three .box {
-    width: 360px;
-    height: 400px;
+    width: 100%;
+    height: 100%;
     background: white;
     z-index: 1;
     position: relative;
@@ -217,6 +222,9 @@ input:focus {
     z-index: -1;
     transform: translateZ(-300px);
     transition: .8s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .three .box .back h1 { 
     color: blue;
@@ -226,7 +234,15 @@ input:focus {
     width: fit-content;
     margin: 40px auto;
     padding: 15px;
-    font-size: 30px;
+    font-size: 35px;
+    font-family: 'Cairo', sans-serif;
+    font-family: 'Caveat', cursive;
+    font-family: 'Clicker Script', cursive;
+    font-family: 'Lobster', cursive;
+    font-family: 'Luxurious Roman', cursive;
+    font-family: 'Noto Kufi Arabic', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Quintessential', cursive;
     border-radius: 11px;
     animation: colorChange 8s steps(3) infinite ;
 }
