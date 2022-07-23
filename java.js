@@ -16,7 +16,7 @@ console.log(user)
 document.forms[0].onsubmit = function (e) { 
 let userValid = false;
 let ageValid = false;
- if (user.value === "Tasneem" && age.value === "19") { 
+ if (user.value === "shosho" && age.value === "19") { 
      seThree.classList.add("shwo");
 
  }  else { 
