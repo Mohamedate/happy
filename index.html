@@ -12,22 +12,24 @@
         <section class="one ">
             <div class="container">
             <div class="card">
-                <h2><span>HI bro</span> Let me ask you some questions</h2>
-                <p>Are you ready</p>
+                <h2><span>HI bro</span> Let me ask you some question</h2>
+                <p>Are ready</p>
                 <button class="btn-one" onclick="shwoSection()">Yes</button>
             </div>
               </div>
         </section>
+
+
         <section class="two ">
             <div class="container">
                 <div class="card">
                     <form action="">
-                        <label for="">What's your name?</label>
+                        <label for="">Enter your name</label>
                         <input type="text" name="user">
-                        <label for="">How old are you?</label>
+                        <label for="">Enter your age</label>
                         <input type="text" name="age">
                         <input type="submit" value="Ok">
-                        <h2 class="error">You are not the <br>right person</h2>
+                        <h2 class="error">Incorrect name or age,<br> check again please</h2>
                     </form>
                 </div>
                 
@@ -35,15 +37,15 @@
             </div>
            
         </section>
-        <section class="three ">
+        <section class="three">
 <div class="container">
     <div class="card">
         <div class="box">
 <div class="left"></div>
 <div class="right"></div>
 <div class="back">
-    <h1>Tasneem</h1>
-    <h1>Sweet 19</h1>
+    <h1 class="name"></h1>
+    <h1 class="age"></h1>
 </div>
         </div>
        
@@ -52,7 +54,8 @@
 
 
         </section>
-        
+
+        <audio id="happySong" src="sound/happy.mp3" preload="auto"></audio>
     <script src="java.js"></script>
 </body>
 </html>
