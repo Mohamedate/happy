@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800&family=Caveat&family=Clicker+Script&family=Lobster&family=Luxurious+Roman&family=Noto+Kufi+Arabic&family=Poppins:wght@200;300;400;500;600&family=Quintessential&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
 * { 
     margin: 0;
     padding: 0;
@@ -10,6 +11,7 @@
 }
 body { 
     background: black;
+    font-family: 'Exo 2', sans-serif;
 }
 .container { 
     margin: 0 auto;
@@ -61,7 +63,7 @@ section.shwo {
 .card::before { 
     content: '';
     position: absolute;
-    width: 600px;
+    width: 500px;
     height: 100px;
     background: linear-gradient(90deg,
     rgba(12,212,238) 0%,rgba(220,39,252,1) 35%,
@@ -157,21 +159,12 @@ input:focus {
     animation: change 3s  linear ;
 }
 @keyframes change {
-    20% { 
-        color: red;
-    }
-    40% { 
-        color: black;
-    }
-    60% { 
-        color: red;
-    }
-    80% { 
-        color: black;
-    }
-    100% { 
-        color: red;
-    }
+ 0%, 80% { 
+    color: red;
+  }
+  100% { 
+    color: black;
+  }
 }
 
 .three .box {
@@ -260,13 +253,14 @@ input:focus {
         color: rgb(255, 255, 255);
     }
 }
- .box:hover .left { 
+.box.effect .left { 
     transform: rotateY(-360deg);
 }
- .box:hover .right { 
+.box.effect .right { 
     transform: rotateY(360deg);
 }
-.box:hover .back { 
+.box.effect .back { 
     transform: translateZ(0);
     z-index: 1;
 }
+
