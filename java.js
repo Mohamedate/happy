@@ -18,7 +18,7 @@ box = document.querySelector(".box");
 document.forms[0].onsubmit = function (e) { 
 let userValid = false;
 let ageValid = false;
- if (/[a-z]{3,}/gi.test(user.value) && /\d+/gi.test(age.value)) { 
+ if (/[a-z]{3,}/gi.test(user.value) && /[1-9]+/gi.test(age.value)) { 
     happyName.innerHTML = user.value;
     happyAge.innerHTML = `Sweet ${age.value}`;
      seThree.classList.add("shwo");
